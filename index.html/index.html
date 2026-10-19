@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name | Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <!-- Top bar with the "Discovery Meter" -->
+  <header class="topbar">
+    <a href="#home" class="logo">HCI<span>.</span></a>
+    <div class="meter" title="Explore the page to fill the meter!">
+      <span class="meter-label">Discovery <b id="meterCount">0</b>/5</span>
+      <div class="meter-track"><div class="meter-fill" id="meterFill"></div></div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#game">Game</a>
+      <a href="#contact">Contact</a>
+      <button id="themeBtn" class="icon-btn" aria-label="Toggle dark / light theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">👋 Hi there, welcome!</p>
+        <h1>I'm <span class="grad">Edmar T. Bulawin Jr.</span></h1>
+        <p class="typing">I'm a <span id="typed"></span><span class="cursor">|</span></p>
+        <p class="lead">
+          Hey! You have 45 seconds with me, so let's make them count.
+          Click around, there are <b>5 secrets</b> hidden on this page. Can you find them all?
+        </p>
+        <div class="cta">
+          <a href="#about" class="btn primary">Start exploring ↓</a>
+          <a href="#game" class="btn ghost">Play a quick game 🎮</a>
+        </div>
+        <p class="stay-timer">⏱ You've been here for <b id="stay">0</b>s</p>
+      </div>
+
+      <div class="hero-photo">
+        <div class="ring"></div>
+        <div class="photo" id="photo" tabindex="0" role="button" aria-label="Click my photo">
+          <!-- Put your picture in the same folder and name it photo.jpg -->
+          <img src="rene.jpg" alt="Photo of Your Name" id="photoImg" />
+        </div>
+        <span class="hint">👆 Click me!</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h2>About <span class="grad">Me</span></h2>
+      <div class="about-grid">
+        <p>
+          I am Edmar T. Bulawin Jr., a 3rd-year student at the University of Cebu.
+          Passionate about tech, UI/UX design, and software development, I love turning
+          creative concepts into smooth, user-friendly digital experiences. Driven by
+          curiosity and continuous learning, I aspire to become a skilled UI/UX designer
+          and software engineer crafting impactful web and mobile solutions.
+        </p>
+        <div class="stats">
+          <div class="stat"><b data-count="20">0</b><span>Years old</span></div>
+          <div class="stat"><b data-count="12">0</b><span>Projects</span></div>
+          <div class="stat"><b data-count="999">0</b><span>Cups of coffee ☕</span></div>
+        </div>
+      </div>
+      <ul class="details">
+        <li>📍 <b>Location:</b> Lawis Alaska Mambaling Cebu City.</li>
+        <li>🎓 <b>Studying:</b> Information Technology</li>
+        <li>💬 <b>Languages:</b> English, Filipino, Bisaya</li>
+        <li>🎯 <b>Goal:</b> Software Developer</li>
+      </ul>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section reveal">
+      <h2>My <span class="grad">Skills</span></h2>
+      <p class="sub">Hover or tap a skill to see it in action ✨</p>
+      <div class="skills">
+        <div class="skill" data-level="90"><div class="skill-head"><span>HTML & CSS</span><em>90%</em></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-level="75"><div class="skill-head"><span>JavaScript</span><em>75%</em></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-level="80"><div class="skill-head"><span>Problem Solving</span><em>80%</em></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-level="85"><div class="skill-head"><span>Teamwork</span><em>85%</em></div><div class="bar"><i></i></div></div>
+        <div class="skill" data-level="70"><div class="skill-head"><span>Creative Design</span><em>70%</em></div><div class="bar"><i></i></div></div>
+      </div>
+    </section>
+
+    <!-- HOBBIES -->
+    <section id="hobbies" class="section reveal">
+      <h2>Hobbies & <span class="grad">Interests</span></h2>
+      <p class="sub">Tap a card to flip it 🔄</p>
+      <div class="cards">
+        <div class="card" tabindex="0" role="button">
+          <div class="face front"><span class="emoji">🎮</span><h3>Gaming</h3></div>
+          <div class="face back"><p>Hooked on Valorant, CrossFire, and Mobile Legends for the intense teamwork and clutch moments.</p></div>
+        </div>
+        <div class="card" tabindex="0" role="button">
+          <div class="face front"><span class="emoji">🎵</span><h3>Music</h3></div>
+          <div class="face back"><p>Always on repeat: Justin Bieber and Joji—blending smooth Pop, R&B, and soulful lo-fi vibes.</p></div>
+        </div>
+        <div class="card" tabindex="0" role="button">
+          <div class="face front"><span class="emoji">📸</span><h3>Photography</h3></div>
+          <div class="face back"><p>Capturing life’s moments frame by frame loving creative photo editing, sharp angles, and visual storytelling.</p></div>
+        </div>
+        <div class="card" tabindex="0" role="button">
+          <div class="face front"><span class="emoji">🏐</span><h3>Sports</h3></div>
+          <div class="face back"><p>Always up for a game of badminton fast-paced, high energy, and pure fun.</p></div>
+        </div>
+      </div>
+
+      <div class="chips" id="chips">
+        <button class="chip" data-msg="Fascinated by building systems, coding projects, and modern tech trends.">💻 Technology</button>
+        <button class="chip" data-msg="Loving new adventures, discovering hidden spots, and making memories along the way">✈️ Travel</button>
+        <button class="chip" data-msg="Fueled by good meals, sweet treats, and exploring new food places.">🍜 Food</button>
+        <button class="chip" data-msg="Enjoying late night movie marathons and unforgettable cinematic experiences.">🎬 Movies</button>
+        <button class="chip" data-msg="Finding focus and inspiration, one page at a time.">📚 Reading</button>
+      </div>
+      <p class="chip-msg" id="chipMsg" aria-live="polite">Tap an interest above 👆</p>
+    </section>
+
+    <!-- GAME -->
+    <section id="game" class="section reveal">
+      <h2>Two Truths & <span class="grad">a Lie</span></h2>
+      <p class="sub">Which one is the lie about me? Pick one!</p>
+      <div class="game" id="game-box">
+        <button class="opt" data-lie="false">I can solve a Rubik's cube in under 2 minutes.</button>
+        <button class="opt" data-lie="true">I Scam some kids or older than me in roblox.</button>
+        <button class="opt" data-lie="false">I once met a famous person by accident.</button>
+      </div>
+      <p class="game-result" id="gameResult" aria-live="polite"></p>
+      <p class="tiny"></p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section reveal">
+      <h2>Let's <span class="grad">Connect</span></h2>
+      <p class="sub">Thanks for stopping by! Say hi 👇</p>
+      <div class="links">
+        <a class="btn primary" href="mailto:edmarbulawin59@gmail.com">✉️ Email me</a>
+        <a class="btn ghost" href="https://github.com/edmartyy" target="_blank" rel="noopener">🐙 GitHub</a>
+        <a class="btn ghost" href="https://www.facebook.com/edmartyy" target="_blank" rel="noopener">📘 Facebook</a>
+      </div>
+      <button id="surprise" class="btn ghost big">🎁 Surprise me</button>
+    </section>
+  </main>
+
+  <footer>Made with ☕, HTML, CSS & JavaScript by Edmartyy · 2026</footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
